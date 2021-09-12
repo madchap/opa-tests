@@ -1,0 +1,1216 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1631446306.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"matches",
+		"source",
+		"distro",
+		"descriptor"
+	],
+	"properties": {
+		"matches": {
+			"$id": "#root/matches", 
+			"title": "Matches", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/matches/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"vulnerability",
+					"relatedVulnerabilities",
+					"matchDetails",
+					"artifact"
+				],
+				"properties": {
+					"vulnerability": {
+						"$id": "#root/matches/items/vulnerability", 
+						"title": "Vulnerability", 
+						"type": "object",
+						"required": [
+							"id",
+							"dataSource",
+							"namespace",
+							"severity",
+							"urls",
+							"cvss",
+							"fix",
+							"advisories"
+						],
+						"properties": {
+							"id": {
+								"$id": "#root/matches/items/vulnerability/id", 
+								"title": "Id", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"CVE-2007-6755"
+								],
+								"pattern": "^.*$"
+							},
+							"dataSource": {
+								"$id": "#root/matches/items/vulnerability/dataSource", 
+								"title": "Datasource", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"https://security-tracker.debian.org/tracker/CVE-2007-6755"
+								],
+								"pattern": "^.*$"
+							},
+							"namespace": {
+								"$id": "#root/matches/items/vulnerability/namespace", 
+								"title": "Namespace", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"debian:10"
+								],
+								"pattern": "^.*$"
+							},
+							"severity": {
+								"$id": "#root/matches/items/vulnerability/severity", 
+								"title": "Severity", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Negligible"
+								],
+								"pattern": "^.*$"
+							},
+							"urls": {
+								"$id": "#root/matches/items/vulnerability/urls", 
+								"title": "Urls", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/matches/items/vulnerability/urls/items", 
+									"title": "Items", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"https://security-tracker.debian.org/tracker/CVE-2007-6755"
+									],
+									"pattern": "^.*$"
+								}
+							},
+							"cvss": {
+								"$id": "#root/matches/items/vulnerability/cvss", 
+								"title": "Cvss", 
+								"type": "array",
+								"default": []
+							},
+							"fix": {
+								"$id": "#root/matches/items/vulnerability/fix", 
+								"title": "Fix", 
+								"type": "object",
+								"required": [
+									"versions",
+									"state"
+								],
+								"properties": {
+									"versions": {
+										"$id": "#root/matches/items/vulnerability/fix/versions", 
+										"title": "Versions", 
+										"type": "array",
+										"default": []
+									},
+									"state": {
+										"$id": "#root/matches/items/vulnerability/fix/state", 
+										"title": "State", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"not-fixed"
+										],
+										"pattern": "^.*$"
+									}
+								}
+							}
+,
+							"advisories": {
+								"$id": "#root/matches/items/vulnerability/advisories", 
+								"title": "Advisories", 
+								"type": "array",
+								"default": []
+							}
+						}
+					}
+,
+					"relatedVulnerabilities": {
+						"$id": "#root/matches/items/relatedVulnerabilities", 
+						"title": "Relatedvulnerabilities", 
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/matches/items/relatedVulnerabilities/items", 
+							"title": "Items", 
+							"type": "object",
+							"required": [
+								"id",
+								"dataSource",
+								"namespace",
+								"severity",
+								"urls",
+								"description",
+								"cvss"
+							],
+							"properties": {
+								"id": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/id", 
+									"title": "Id", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"CVE-2007-6755"
+									],
+									"pattern": "^.*$"
+								},
+								"dataSource": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/dataSource", 
+									"title": "Datasource", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"https://nvd.nist.gov/vuln/detail/CVE-2007-6755"
+									],
+									"pattern": "^.*$"
+								},
+								"namespace": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/namespace", 
+									"title": "Namespace", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"nvd"
+									],
+									"pattern": "^.*$"
+								},
+								"severity": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/severity", 
+									"title": "Severity", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"Medium"
+									],
+									"pattern": "^.*$"
+								},
+								"urls": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/urls", 
+									"title": "Urls", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/matches/items/relatedVulnerabilities/items/urls/items", 
+										"title": "Items", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/"
+										],
+										"pattern": "^.*$"
+									}
+								},
+								"description": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/description", 
+									"title": "Description", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"The NIST SP 800-90A default statement of the Dual Elliptic Curve Deterministic Random Bit Generation (Dual_EC_DRBG) algorithm contains point Q constants with a possible relationship to certain \"skeleton key\" values, which might allow context-dependent attackers to defeat cryptographic protection mechanisms by leveraging knowledge of those values.  NOTE: this is a preliminary CVE for Dual_EC_DRBG; future research may provide additional details about point Q and associated attacks, and could potentially lead to a RECAST or REJECT of this CVE."
+									],
+									"pattern": "^.*$"
+								},
+								"cvss": {
+									"$id": "#root/matches/items/relatedVulnerabilities/items/cvss", 
+									"title": "Cvss", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items", 
+										"title": "Items", 
+										"type": "object",
+										"required": [
+											"version",
+											"vector",
+											"metrics",
+											"vendorMetadata"
+										],
+										"properties": {
+											"version": {
+												"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/version", 
+												"title": "Version", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"2.0"
+												],
+												"pattern": "^.*$"
+											},
+											"vector": {
+												"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/vector", 
+												"title": "Vector", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"AV:N/AC:M/Au:N/C:P/I:P/A:N"
+												],
+												"pattern": "^.*$"
+											},
+											"metrics": {
+												"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/metrics", 
+												"title": "Metrics", 
+												"type": "object",
+												"required": [
+													"baseScore",
+													"exploitabilityScore",
+													"impactScore"
+												],
+												"properties": {
+													"baseScore": {
+														"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/metrics/baseScore", 
+														"title": "Basescore", 
+														"type": "number",
+														"examples": [
+															5.8
+														],
+														"default": 0.0
+													},
+													"exploitabilityScore": {
+														"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/metrics/exploitabilityScore", 
+														"title": "Exploitabilityscore", 
+														"type": "number",
+														"examples": [
+															8.6
+														],
+														"default": 0.0
+													},
+													"impactScore": {
+														"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/metrics/impactScore", 
+														"title": "Impactscore", 
+														"type": "number",
+														"examples": [
+															4.9
+														],
+														"default": 0.0
+													}
+												}
+											}
+,
+											"vendorMetadata": {
+												"$id": "#root/matches/items/relatedVulnerabilities/items/cvss/items/vendorMetadata", 
+												"title": "Vendormetadata", 
+												"type": "object",
+												"required": [
+												],
+												"properties": {
+												}
+											}
+
+										}
+									}
+
+								}
+							}
+						}
+
+					},
+					"matchDetails": {
+						"$id": "#root/matches/items/matchDetails", 
+						"title": "Matchdetails", 
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/matches/items/matchDetails/items", 
+							"title": "Items", 
+							"type": "object",
+							"required": [
+								"matcher",
+								"searchedBy",
+								"found"
+							],
+							"properties": {
+								"matcher": {
+									"$id": "#root/matches/items/matchDetails/items/matcher", 
+									"title": "Matcher", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"dpkg-matcher"
+									],
+									"pattern": "^.*$"
+								},
+								"searchedBy": {
+									"$id": "#root/matches/items/matchDetails/items/searchedBy", 
+									"title": "Searchedby", 
+									"type": "object",
+									"required": [
+										"distro",
+										"namespace",
+										"package"
+									],
+									"properties": {
+										"distro": {
+											"$id": "#root/matches/items/matchDetails/items/searchedBy/distro", 
+											"title": "Distro", 
+											"type": "object",
+											"required": [
+												"type",
+												"version"
+											],
+											"properties": {
+												"type": {
+													"$id": "#root/matches/items/matchDetails/items/searchedBy/distro/type", 
+													"title": "Type", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"debian"
+													],
+													"pattern": "^.*$"
+												},
+												"version": {
+													"$id": "#root/matches/items/matchDetails/items/searchedBy/distro/version", 
+													"title": "Version", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"10"
+													],
+													"pattern": "^.*$"
+												}
+											}
+										}
+,
+										"namespace": {
+											"$id": "#root/matches/items/matchDetails/items/searchedBy/namespace", 
+											"title": "Namespace", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"debian:10"
+											],
+											"pattern": "^.*$"
+										},
+										"package": {
+											"$id": "#root/matches/items/matchDetails/items/searchedBy/package", 
+											"title": "Package", 
+											"type": "object",
+											"required": [
+												"name",
+												"version"
+											],
+											"properties": {
+												"name": {
+													"$id": "#root/matches/items/matchDetails/items/searchedBy/package/name", 
+													"title": "Name", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"openssl"
+													],
+													"pattern": "^.*$"
+												},
+												"version": {
+													"$id": "#root/matches/items/matchDetails/items/searchedBy/package/version", 
+													"title": "Version", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"1.1.1d-0+deb10u7"
+													],
+													"pattern": "^.*$"
+												}
+											}
+										}
+
+									}
+								}
+,
+								"found": {
+									"$id": "#root/matches/items/matchDetails/items/found", 
+									"title": "Found", 
+									"type": "object",
+									"required": [
+										"versionConstraint"
+									],
+									"properties": {
+										"versionConstraint": {
+											"$id": "#root/matches/items/matchDetails/items/found/versionConstraint", 
+											"title": "Versionconstraint", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"none (deb)"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+
+							}
+						}
+
+					},
+					"artifact": {
+						"$id": "#root/matches/items/artifact", 
+						"title": "Artifact", 
+						"type": "object",
+						"required": [
+							"name",
+							"version",
+							"type",
+							"locations",
+							"language",
+							"licenses",
+							"cpes",
+							"purl",
+							"metadata"
+						],
+						"properties": {
+							"name": {
+								"$id": "#root/matches/items/artifact/name", 
+								"title": "Name", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"libssl1.1"
+								],
+								"pattern": "^.*$"
+							},
+							"version": {
+								"$id": "#root/matches/items/artifact/version", 
+								"title": "Version", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"1.1.1d-0+deb10u7"
+								],
+								"pattern": "^.*$"
+							},
+							"type": {
+								"$id": "#root/matches/items/artifact/type", 
+								"title": "Type", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"deb"
+								],
+								"pattern": "^.*$"
+							},
+							"locations": {
+								"$id": "#root/matches/items/artifact/locations", 
+								"title": "Locations", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/matches/items/artifact/locations/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"path",
+										"layerID"
+									],
+									"properties": {
+										"path": {
+											"$id": "#root/matches/items/artifact/locations/items/path", 
+											"title": "Path", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"/var/lib/dpkg/status.d/libssl1"
+											],
+											"pattern": "^.*$"
+										},
+										"layerID": {
+											"$id": "#root/matches/items/artifact/locations/items/layerID", 
+											"title": "Layerid", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"sha256:43656e43813a6559e595b5f0bbf758229b5fd6de80a0c6f439db880294469d41"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+
+							},
+							"language": {
+								"$id": "#root/matches/items/artifact/language", 
+								"title": "Language", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									""
+								],
+								"pattern": "^.*$"
+							},
+							"licenses": {
+								"$id": "#root/matches/items/artifact/licenses", 
+								"title": "Licenses", 
+								"type": "array",
+								"default": []
+							},
+							"cpes": {
+								"$id": "#root/matches/items/artifact/cpes", 
+								"title": "Cpes", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/matches/items/artifact/cpes/items", 
+									"title": "Items", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"cpe:2.3:a:libssl1.1:libssl1.1:1.1.1d-0+deb10u7:*:*:*:*:*:*:*"
+									],
+									"pattern": "^.*$"
+								}
+							},
+							"purl": {
+								"$id": "#root/matches/items/artifact/purl", 
+								"title": "Purl", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"pkg:deb/debian/libssl1.1@1.1.1d-0+deb10u7?arch=amd64"
+								],
+								"pattern": "^.*$"
+							},
+							"metadata": {
+								"$id": "#root/matches/items/artifact/metadata", 
+								"title": "Metadata", 
+								"type": "object",
+								"required": [
+									"Source"
+								],
+								"properties": {
+									"Source": {
+										"$id": "#root/matches/items/artifact/metadata/Source", 
+										"title": "Source", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"openssl"
+										],
+										"pattern": "^.*$"
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+			}
+
+		},
+		"source": {
+			"$id": "#root/source", 
+			"title": "Source", 
+			"type": "object",
+			"required": [
+				"type",
+				"target"
+			],
+			"properties": {
+				"type": {
+					"$id": "#root/source/type", 
+					"title": "Type", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"image"
+					],
+					"pattern": "^.*$"
+				},
+				"target": {
+					"$id": "#root/source/target", 
+					"title": "Target", 
+					"type": "object",
+					"required": [
+						"userInput",
+						"imageID",
+						"manifestDigest",
+						"mediaType",
+						"tags",
+						"imageSize",
+						"layers",
+						"manifest",
+						"config",
+						"repoDigests"
+					],
+					"properties": {
+						"userInput": {
+							"$id": "#root/source/target/userInput", 
+							"title": "Userinput", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"gcr.io/distroless/java:11"
+							],
+							"pattern": "^.*$"
+						},
+						"imageID": {
+							"$id": "#root/source/target/imageID", 
+							"title": "Imageid", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"sha256:64b5aa29d9f83a706868e111943cccff91bfe41d6a802439244748aeec1a7aba"
+							],
+							"pattern": "^.*$"
+						},
+						"manifestDigest": {
+							"$id": "#root/source/target/manifestDigest", 
+							"title": "Manifestdigest", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"sha256:891b504c75a5294e8956df68ba3df73389cb63142e554858ab6f21fc781b01f3"
+							],
+							"pattern": "^.*$"
+						},
+						"mediaType": {
+							"$id": "#root/source/target/mediaType", 
+							"title": "Mediatype", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"application/vnd.docker.distribution.manifest.v2+json"
+							],
+							"pattern": "^.*$"
+						},
+						"tags": {
+							"$id": "#root/source/target/tags", 
+							"title": "Tags", 
+							"type": "array",
+							"default": [],
+							"items":{
+								"$id": "#root/source/target/tags/items", 
+								"title": "Items", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"gcr.io/distroless/java:11"
+								],
+								"pattern": "^.*$"
+							}
+						},
+						"imageSize": {
+							"$id": "#root/source/target/imageSize", 
+							"title": "Imagesize", 
+							"type": "integer",
+							"examples": [
+								199934802
+							],
+							"default": 0
+						},
+						"layers": {
+							"$id": "#root/source/target/layers", 
+							"title": "Layers", 
+							"type": "array",
+							"default": [],
+							"items":{
+								"$id": "#root/source/target/layers/items", 
+								"title": "Items", 
+								"type": "object",
+								"required": [
+									"mediaType",
+									"digest",
+									"size"
+								],
+								"properties": {
+									"mediaType": {
+										"$id": "#root/source/target/layers/items/mediaType", 
+										"title": "Mediatype", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"application/vnd.docker.image.rootfs.diff.tar.gzip"
+										],
+										"pattern": "^.*$"
+									},
+									"digest": {
+										"$id": "#root/source/target/layers/items/digest", 
+										"title": "Digest", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+										],
+										"pattern": "^.*$"
+									},
+									"size": {
+										"$id": "#root/source/target/layers/items/size", 
+										"title": "Size", 
+										"type": "integer",
+										"examples": [
+											1802819
+										],
+										"default": 0
+									}
+								}
+							}
+
+						},
+						"manifest": {
+							"$id": "#root/source/target/manifest", 
+							"title": "Manifest", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoxMTY2LCJkaWdlc3QiOiJzaGEyNTY6NjRiNWFhMjlkOWY4M2E3MDY4NjhlMTExOTQzY2NjZmY5MWJmZTQxZDZhODAyNDM5MjQ0NzQ4YWVlYzFhN2FiYSJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjozMDYxNzYwLCJkaWdlc3QiOiJzaGEyNTY6MTY2Nzk0MDJkYzIwNmM5ODJiNTU1MmFiOGRlN2Q4OTg1NDcxMDBlNTQ2OGJlMjlkNGY2N2QzOTNjMGVhZGZkYiJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjE3Nzg2ODgwLCJkaWdlc3QiOiJzaGEyNTY6NDM2NTZlNDM4MTNhNjU1OWU1OTViNWYwYmJmNzU4MjI5YjVmZDZkZTgwYTBjNmY0MzlkYjg4MDI5NDQ2OWQ0MSJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjE5OTY4MDAsImRpZ2VzdCI6InNoYTI1Njo1ZWRiNDhkM2Y0ZmNkZjkyZjA3NDdlN2Q3NzYwOWQyMDUzYWJjYWI4MWU0YTI4NDNkM2RhY2ZmNmZjNGNmOWVmIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6ODgwNjQwMCwiZGlnZXN0Ijoic2hhMjU2OjE1YjlhZWVlODQ5MzdiYTg3YjJhYjkyYmU0NDU2NmIzNWRiZTNhYzI0OWRiOWIyMDU1OGYzMDc4MjdlMmU5ZWMifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjoxNzAzNDI0MDAsImRpZ2VzdCI6InNoYTI1NjplMTkzMjA2MzJlYTcxNTMyMWQyNWFlYzA1NGFmMzczODgwNjQ1YWJiYTc1ZTFlMDNhMmJmZGVmOTdmYjkyZWY4In1dfQ=="
+							],
+							"pattern": "^.*$"
+						},
+						"config": {
+							"$id": "#root/source/target/config", 
+							"title": "Config", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImF1dGhvciI6IkJhemVsIiwiY3JlYXRlZCI6IjE5NzAtMDEtMDFUMDA6MDA6MDBaIiwiaGlzdG9yeSI6W3siYXV0aG9yIjoiQmF6ZWwiLCJjcmVhdGVkIjoiMTk3MC0wMS0wMVQwMDowMDowMFoiLCJjcmVhdGVkX2J5IjoiYmF6ZWwgYnVpbGQgLi4uIn0seyJhdXRob3IiOiJCYXplbCIsImNyZWF0ZWQiOiIxOTcwLTAxLTAxVDAwOjAwOjAwWiIsImNyZWF0ZWRfYnkiOiJiYXplbCBidWlsZCAuLi4ifSx7ImF1dGhvciI6IkJhemVsIiwiY3JlYXRlZCI6IjE5NzAtMDEtMDFUMDA6MDA6MDBaIiwiY3JlYXRlZF9ieSI6ImJhemVsIGJ1aWxkIC4uLiJ9LHsiYXV0aG9yIjoiQmF6ZWwiLCJjcmVhdGVkIjoiMTk3MC0wMS0wMVQwMDowMDowMFoiLCJjcmVhdGVkX2J5IjoiYmF6ZWwgYnVpbGQgLi4uIn0seyJhdXRob3IiOiJCYXplbCIsImNyZWF0ZWQiOiIxOTcwLTAxLTAxVDAwOjAwOjAwWiIsImNyZWF0ZWRfYnkiOiJiYXplbCBidWlsZCAuLi4ifV0sIm9zIjoibGludXgiLCJyb290ZnMiOnsidHlwZSI6ImxheWVycyIsImRpZmZfaWRzIjpbInNoYTI1NjoxNjY3OTQwMmRjMjA2Yzk4MmI1NTUyYWI4ZGU3ZDg5ODU0NzEwMGU1NDY4YmUyOWQ0ZjY3ZDM5M2MwZWFkZmRiIiwic2hhMjU2OjQzNjU2ZTQzODEzYTY1NTllNTk1YjVmMGJiZjc1ODIyOWI1ZmQ2ZGU4MGEwYzZmNDM5ZGI4ODAyOTQ0NjlkNDEiLCJzaGEyNTY6NWVkYjQ4ZDNmNGZjZGY5MmYwNzQ3ZTdkNzc2MDlkMjA1M2FiY2FiODFlNGEyODQzZDNkYWNmZjZmYzRjZjllZiIsInNoYTI1NjoxNWI5YWVlZTg0OTM3YmE4N2IyYWI5MmJlNDQ1NjZiMzVkYmUzYWMyNDlkYjliMjA1NThmMzA3ODI3ZTJlOWVjIiwic2hhMjU2OmUxOTMyMDYzMmVhNzE1MzIxZDI1YWVjMDU0YWYzNzM4ODA2NDVhYmJhNzVlMWUwM2EyYmZkZWY5N2ZiOTJlZjgiXX0sImNvbmZpZyI6eyJFbnRyeXBvaW50IjpbIi91c3IvYmluL2phdmEiLCItamFyIl0sIkVudiI6WyJKQVZBX1ZFUlNJT049MTEuMC4xMiIsIkxBTkc9Qy5VVEYtOCIsIlBBVEg9L3Vzci9sb2NhbC9zYmluOi91c3IvbG9jYWwvYmluOi91c3Ivc2JpbjovdXNyL2Jpbjovc2JpbjovYmluIiwiU1NMX0NFUlRfRklMRT0vZXRjL3NzbC9jZXJ0cy9jYS1jZXJ0aWZpY2F0ZXMuY3J0Il0sIlVzZXIiOiIwIiwiV29ya2luZ0RpciI6Ii8ifX0="
+							],
+							"pattern": "^.*$"
+						},
+						"repoDigests": {
+							"$id": "#root/source/target/repoDigests", 
+							"title": "Repodigests", 
+							"type": "array",
+							"default": [],
+							"items":{
+								"$id": "#root/source/target/repoDigests/items", 
+								"title": "Items", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"gcr.io/distroless/java@sha256:6bd00235394af1c60837da54d6d8b50ae903f3abecce7c1880ea3601688c570d"
+								],
+								"pattern": "^.*$"
+							}
+						}
+					}
+				}
+
+			}
+		}
+,
+		"distro": {
+			"$id": "#root/distro", 
+			"title": "Distro", 
+			"type": "object",
+			"required": [
+				"name",
+				"version",
+				"idLike"
+			],
+			"properties": {
+				"name": {
+					"$id": "#root/distro/name", 
+					"title": "Name", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"debian"
+					],
+					"pattern": "^.*$"
+				},
+				"version": {
+					"$id": "#root/distro/version", 
+					"title": "Version", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"10"
+					],
+					"pattern": "^.*$"
+				},
+				"idLike": {
+					"$id": "#root/distro/idLike", 
+					"title": "Idlike", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"descriptor": {
+			"$id": "#root/descriptor", 
+			"title": "Descriptor", 
+			"type": "object",
+			"required": [
+				"name",
+				"version",
+				"configuration",
+				"db"
+			],
+			"properties": {
+				"name": {
+					"$id": "#root/descriptor/name", 
+					"title": "Name", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"grype"
+					],
+					"pattern": "^.*$"
+				},
+				"version": {
+					"$id": "#root/descriptor/version", 
+					"title": "Version", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"0.17.0"
+					],
+					"pattern": "^.*$"
+				},
+				"configuration": {
+					"$id": "#root/descriptor/configuration", 
+					"title": "Configuration", 
+					"type": "object",
+					"required": [
+						"ConfigPath",
+						"Output",
+						"OutputTemplateFile",
+						"Scope",
+						"Quiet",
+						"Log",
+						"CliOptions",
+						"Db",
+						"Dev",
+						"CheckForAppUpdate",
+						"FailOn",
+						"registry"
+					],
+					"properties": {
+						"ConfigPath": {
+							"$id": "#root/descriptor/configuration/ConfigPath", 
+							"title": "Configpath", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"Output": {
+							"$id": "#root/descriptor/configuration/Output", 
+							"title": "Output", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"json"
+							],
+							"pattern": "^.*$"
+						},
+						"OutputTemplateFile": {
+							"$id": "#root/descriptor/configuration/OutputTemplateFile", 
+							"title": "Outputtemplatefile", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"Scope": {
+							"$id": "#root/descriptor/configuration/Scope", 
+							"title": "Scope", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"Squashed"
+							],
+							"pattern": "^.*$"
+						},
+						"Quiet": {
+							"$id": "#root/descriptor/configuration/Quiet", 
+							"title": "Quiet", 
+							"type": "boolean",
+							"examples": [
+								false
+							],
+							"default": true
+						},
+						"Log": {
+							"$id": "#root/descriptor/configuration/Log", 
+							"title": "Log", 
+							"type": "object",
+							"required": [
+								"Structured",
+								"Level",
+								"FileLocation"
+							],
+							"properties": {
+								"Structured": {
+									"$id": "#root/descriptor/configuration/Log/Structured", 
+									"title": "Structured", 
+									"type": "boolean",
+									"examples": [
+										false
+									],
+									"default": true
+								},
+								"Level": {
+									"$id": "#root/descriptor/configuration/Log/Level", 
+									"title": "Level", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										""
+									],
+									"pattern": "^.*$"
+								},
+								"FileLocation": {
+									"$id": "#root/descriptor/configuration/Log/FileLocation", 
+									"title": "Filelocation", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										""
+									],
+									"pattern": "^.*$"
+								}
+							}
+						}
+,
+						"CliOptions": {
+							"$id": "#root/descriptor/configuration/CliOptions", 
+							"title": "Clioptions", 
+							"type": "object",
+							"required": [
+								"ConfigPath",
+								"Verbosity"
+							],
+							"properties": {
+								"ConfigPath": {
+									"$id": "#root/descriptor/configuration/CliOptions/ConfigPath", 
+									"title": "Configpath", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										""
+									],
+									"pattern": "^.*$"
+								},
+								"Verbosity": {
+									"$id": "#root/descriptor/configuration/CliOptions/Verbosity", 
+									"title": "Verbosity", 
+									"type": "integer",
+									"examples": [
+										0
+									],
+									"default": 0
+								}
+							}
+						}
+,
+						"Db": {
+							"$id": "#root/descriptor/configuration/Db", 
+							"title": "Db", 
+							"type": "object",
+							"required": [
+								"Dir",
+								"UpdateURL",
+								"AutoUpdate",
+								"ValidateByHashOnStart"
+							],
+							"properties": {
+								"Dir": {
+									"$id": "#root/descriptor/configuration/Db/Dir", 
+									"title": "Dir", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"/home/fblaise/.cache/grype/db"
+									],
+									"pattern": "^.*$"
+								},
+								"UpdateURL": {
+									"$id": "#root/descriptor/configuration/Db/UpdateURL", 
+									"title": "Updateurl", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"https://toolbox-data.anchore.io/grype/databases/listing.json"
+									],
+									"pattern": "^.*$"
+								},
+								"AutoUpdate": {
+									"$id": "#root/descriptor/configuration/Db/AutoUpdate", 
+									"title": "Autoupdate", 
+									"type": "boolean",
+									"examples": [
+										true
+									],
+									"default": true
+								},
+								"ValidateByHashOnStart": {
+									"$id": "#root/descriptor/configuration/Db/ValidateByHashOnStart", 
+									"title": "Validatebyhashonstart", 
+									"type": "boolean",
+									"examples": [
+										false
+									],
+									"default": true
+								}
+							}
+						}
+,
+						"Dev": {
+							"$id": "#root/descriptor/configuration/Dev", 
+							"title": "Dev", 
+							"type": "object",
+							"required": [
+								"ProfileCPU"
+							],
+							"properties": {
+								"ProfileCPU": {
+									"$id": "#root/descriptor/configuration/Dev/ProfileCPU", 
+									"title": "Profilecpu", 
+									"type": "boolean",
+									"examples": [
+										false
+									],
+									"default": true
+								}
+							}
+						}
+,
+						"CheckForAppUpdate": {
+							"$id": "#root/descriptor/configuration/CheckForAppUpdate", 
+							"title": "Checkforappupdate", 
+							"type": "boolean",
+							"examples": [
+								true
+							],
+							"default": true
+						},
+						"FailOn": {
+							"$id": "#root/descriptor/configuration/FailOn", 
+							"title": "Failon", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"registry": {
+							"$id": "#root/descriptor/configuration/registry", 
+							"title": "Registry", 
+							"type": "object",
+							"required": [
+								"insecure-skip-tls-verify",
+								"insecure-use-http",
+								"auth"
+							],
+							"properties": {
+								"insecure-skip-tls-verify": {
+									"$id": "#root/descriptor/configuration/registry/insecure-skip-tls-verify", 
+									"title": "Insecure-skip-tls-verify", 
+									"type": "boolean",
+									"examples": [
+										false
+									],
+									"default": true
+								},
+								"insecure-use-http": {
+									"$id": "#root/descriptor/configuration/registry/insecure-use-http", 
+									"title": "Insecure-use-http", 
+									"type": "boolean",
+									"examples": [
+										false
+									],
+									"default": true
+								},
+								"auth": {
+									"$id": "#root/descriptor/configuration/registry/auth", 
+									"title": "Auth", 
+									"type": "array",
+									"default": []
+								}
+							}
+						}
+
+					}
+				}
+,
+				"db": {
+					"$id": "#root/descriptor/db", 
+					"title": "Db", 
+					"type": "object",
+					"required": [
+						"built",
+						"schemaVersion",
+						"location",
+						"checksum",
+						"error"
+					],
+					"properties": {
+						"built": {
+							"$id": "#root/descriptor/db/built", 
+							"title": "Built", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"2021-09-12T08:15:31Z"
+							],
+							"pattern": "^.*$"
+						},
+						"schemaVersion": {
+							"$id": "#root/descriptor/db/schemaVersion", 
+							"title": "Schemaversion", 
+							"type": "integer",
+							"examples": [
+								3
+							],
+							"default": 0
+						},
+						"location": {
+							"$id": "#root/descriptor/db/location", 
+							"title": "Location", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"/home/fblaise/.cache/grype/db/3"
+							],
+							"pattern": "^.*$"
+						},
+						"checksum": {
+							"$id": "#root/descriptor/db/checksum", 
+							"title": "Checksum", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"sha256:f50b086453db49c11958697625cfe83e798d9037f33e5a7c67ed1ebb56817690"
+							],
+							"pattern": "^.*$"
+						},
+						"error": {
+							"$id": "#root/descriptor/db/error", 
+							"title": "Error", 
+							"type": "null",
+							"default": null
+						}
+					}
+				}
+
+			}
+		}
+
+	}
+}
+
